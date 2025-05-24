@@ -40,6 +40,39 @@ X_ACCESS_TOKEN_SECRET=your_twitter_access_token_secret
 python gakuya_bot.py
 ```
 
+## Deployment on Render
+
+1. Create a new Web Service on Render:
+   - Go to [Render Dashboard](https://dashboard.render.com)
+   - Click "New +" and select "Web Service"
+   - Connect your GitHub repository
+
+2. Configure the service:
+   - Name: `gakuya-bot`
+   - Environment: `Python 3`
+   - Build Command: `pip install -r requirements.txt`
+   - Start Command: `python gakuya_bot.py`
+
+3. Add Environment Variables:
+   - Go to Environment section
+   - Add all your API keys from `.env`:
+     ```
+     GROK_API_KEY
+     OPENWEATHER_API_KEY
+     X_API_KEY
+     X_API_SECRET
+     X_ACCESS_TOKEN
+     X_ACCESS_TOKEN_SECRET
+     ```
+
+4. Deploy:
+   - Click "Create Web Service"
+   - Render will automatically deploy your bot
+
+5. Monitor:
+   - Check the "Logs" tab for bot activity
+   - Use the "Events" tab to monitor deployments
+
 ## API Requirements
 
 - [Grok AI](https://grok.ai) - For generating witty posts
