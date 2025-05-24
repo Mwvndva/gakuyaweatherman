@@ -1,0 +1,1 @@
+web: python gakuya_bot.py
