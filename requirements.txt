@@ -5,3 +5,4 @@ schedule>=1.0
 python-dotenv>=1.0
 pytz>=2024.1
 flask>=3.0
+gunicorn>=21.2.0

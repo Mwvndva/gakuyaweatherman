@@ -50,8 +50,9 @@ python gakuya_bot.py
 2. Configure the service:
    - Name: `gakuya-bot`
    - Environment: `Python 3`
-   - Build Command: `pip install -r requirements.txt`
-   - Start Command: `python gakuya_bot.py`
+   - Build Command: `pip install -r requirements.txt && python -m pip install --upgrade pip`
+   - Start Command: `gunicorn gakuya_bot:app`
+   - Plan: Free
 
 3. Add Environment Variables:
    - Go to Environment section
@@ -63,6 +64,7 @@ python gakuya_bot.py
      X_API_SECRET
      X_ACCESS_TOKEN
      X_ACCESS_TOKEN_SECRET
+     PORT=10000
      ```
 
 4. Deploy:
